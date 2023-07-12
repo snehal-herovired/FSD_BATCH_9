@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Social Media Webpage</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <style>
+    /* Custom styles can be added here */
+    .like-btn, .dislike-btn, .follow-btn {
+      color: #aaa;
+      cursor: pointer;
+      transition: color 0.3s;
+    }
+    
+    .like-btn:hover, .dislike-btn:hover, .follow-btn:hover {
+      color: #007bff;
+    }
+    
+    .btn-group .btn {
+      margin-right: 5px;
+    }
+    
+    .post-actions {
+      margin-top: 10px;
+    }
+    .btn-group i{
+        margin:4px
+    }
+  </style>
+</head>
+<body>
+  <!-- Task 2: Create a navigation bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <a class="navbar-brand" href="#">Social Media</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Profile</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Messages</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Notifications</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Visit</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#" data-toggle="modal" data-target="#signinModal">Sign In</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" data-toggle="modal" data-target="#signupModal">Sign Up</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  
+  <!-- Task 3: Design the main content section -->
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://uttarakhandtourism.gov.in/sites/default/files/2020-09/Kedarnath%20Temple.jpg" class="card-img-top" alt="Profile Picture">
+          <div class="card-body">
+            <h5 class="card-title">John Doe</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer gravida eros quis sem faucibus, eu luctus sapien ultrices.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-8">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Post Title 1</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer gravida eros quis sem faucibus, eu luctus sapien ultrices. Donec fringilla augue nec dui mattis, ac pellentesque odio tristique.</p>
+            <div class="post-actions">
+              <div class="btn-group" role="group">
+                <i class="far fa-thumbs-up like-btn"></i>
+                <i class="far fa-thumbs-down dislike-btn"></i>
+                <i class="fas fa-user-plus follow-btn"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card mt-4">
+          <div class="card-body">
+            <h5 class="card-title">Post Title 2</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer gravida eros quis sem faucibus, eu luctus sapien ultrices. Donec fringilla augue nec dui mattis, ac pellentesque odio tristique.</p>
+            <div class="post-actions">
+              <div class="btn-group " role="group">
+                <i class="far fa-thumbs-up like-btn"></i>
+                <i class="far fa-thumbs-down dislike-btn"></i>
+                <i class="fas fa-user-plus follow-btn"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card mt-4">
+          <div class="card-body">
+            <h5 class="card-title">Post Title 3</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer gravida eros quis sem faucibus, eu luctus sapien ultrices. Donec fringilla augue nec dui mattis, ac pellentesque odio tristique.</p>
+            <div class="post-actions">
+              <div class="btn-group" role="group">
+                <i class="far fa-thumbs-up like-btn"></i>
+                <i class="far fa-thumbs-down dislike-btn"></i>
+                <i class="fas fa-user-plus follow-btn"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Task 4: Add an advertisement section -->
+  <div class="container mt-5">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Advertisement</h5>
+        <p class="card-text">Check out our new product!</p>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Task 6: Create sign-in and sign-up buttons in the navbar -->
+  <div class="modal fade" id="signinModal" tabindex="-1" role="dialog" aria-labelledby="signinModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="signinModalLabel">Sign In</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <!-- Sign In Form -->
+          <form>
+            <div class="form-group">
+              <label for="signinEmail">Email address</label>
+              <input type="email" class="form-control" id="signinEmail" aria-describedby="emailHelp" placeholder="Enter email">
+              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div>
+            <div class="form-group">
+              <label for="signinPassword">Password</label>
+              <input type="password" class="form-control" id="signinPassword" placeholder="Password">
+            </div>
+            <button type="submit" class="btn btn-primary">Sign In</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="signupModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="signupModalLabel">Sign Up</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <!-- Sign Up Form -->
+          <form>
+            <div class="form-group">
+              <label for="signupName">Name</label>
+              <input type="text" class="form-control" id="signupName" placeholder="Enter your name">
+            </div>
+            <div class="form-group">
+              <label for="signupEmail">Email address</label>
+              <input type="email" class="form-control" id="signupEmail" aria-describedby="emailHelp" placeholder="Enter email">
+              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div>
+            <div class="form-group">
+              <label for="signupPassword">Password</label>
+              <input type="password" class="form-control" id="signupPassword" placeholder="Password">
+            </div>
+            <button type="submit" class="btn btn-primary">Sign Up</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <footer class="bg-light text-center py-3 mt-5">
+    <p>&copy; 2023 Social Media. All rights reserved.</p>
+  </footer>
+  
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
