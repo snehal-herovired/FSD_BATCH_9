@@ -6,6 +6,11 @@
 // pending, resolved and rejected 
 // ES 6 variant of JS
 let mainbody = document.querySelector('.main');
+let inputBox =document.querySelector('input');
+
+inputBox.addEventListener('change',(event)=>{
+   console.log(event.target.value);  //value method works on input boxes
+})
 
 
 // Promises necessary to deal api call 
