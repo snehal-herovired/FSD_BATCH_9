@@ -1,0 +1,41 @@
+html,body{
+    height: 100%;
+ width: 100%;
+ /* background-color: red; */
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header{
+    height: 10%;
+    width: 100%;
+    background-color: lightblue;
+}
+
+.main{
+    height: 80%;
+    width: 100%;
+    /* background-color: lightcyan; */
+    padding: 3px;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.footer{
+    height: 10%;
+    width: 100%;
+    background-color: lightgray;
+}
+/* descedant selector */
+.main .card{
+   height: 40%;
+   width: 20%;
+   background-color: red;
+   margin: 3px;
+   border-radius: 10px;
+}
