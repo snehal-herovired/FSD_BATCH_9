@@ -1,0 +1,37 @@
+html,body{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    /* background-color: red; */
+}
+*{
+    box-sizing: border-box;
+    /* it enables you to give paddding to box structure whitout changing the default
+    height and widht of the box */
+}
+.header{
+    height: 10%;
+    background-color: lightblue;
+    
+}
+.main{
+    /* background-color: lightgrey; */
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+.navbar-custom{
+background-color: rgb(193, 174, 174);
+color: black;
+height: 100%;
+}
+.main .card{
+    margin: 20px;
+    height: 30%;
+    width: 30%;
+}
+.main .card img{
+    height: 60%;
+    width: 100%;
+}
