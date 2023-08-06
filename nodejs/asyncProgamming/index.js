@@ -1,8 +1,11 @@
 const express =require('express');
-const Product =require('./product')
+const Product =require('./product');
+const morgan =require('morgan'); // library which gives status and logs of the request coming to server.
+
 const app =express();
 // enable 
 app.use(express.json());
+app.use(morgan())
 const Port =5000;
 
 app.get('/product',(req , res)=>{
