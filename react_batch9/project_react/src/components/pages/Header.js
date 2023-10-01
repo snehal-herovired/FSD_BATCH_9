@@ -1,7 +1,7 @@
 import React from 'react'
 
 export default function Header(props) {
-  // console.log(props,"this is props");
+  console.log("i am inside header component...");
   // e_commerce : cart 
   // States : are info or data related to component .
   // props : way of passing info to other component.
