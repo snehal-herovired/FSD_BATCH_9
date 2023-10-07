@@ -5,8 +5,11 @@ import Register from './components/auth/Register';
 import { useState,useEffect } from 'react';
 import Visible from './components/pages/Visible';
 import axios from 'axios';
+import ProductPage from './components/pages/ProductPage';
 function App() {
-  console.log("inside App component...")
+  // console.log("inside App component...")
+const [captureName,setCapturedName]=useState('');
+
   // component :what is ?
   // functional component ,:why?
   // jsx : what?
@@ -29,7 +32,7 @@ function App() {
 
   // UseState :by using useState , we store info or data or state of component.
   //      statevariable,statefunction
-  const [count,setCount] =useState(0) //default value or intial value
+  // const [count,setCount] =useState(0) //default value or intial value
 
   // const [shouldnameChange,setShouldNameChange]=useState(false);
   // // situation : add name :-> exisiting object:-> new name added .
@@ -39,12 +42,12 @@ function App() {
 
   // console.log(a,"this is value of my state variable")
 
-  function increment(){
-  // console.log("clicking + btn");
-  setCount((prev)=>{
-    return prev+1;
-  })
-  }
+  // function increment(){
+  // // console.log("clicking + btn");
+  // setCount((prev)=>{
+  //   return prev+1;
+  // })
+  // }
 
   // function changetheName(){
   // // false -> true
@@ -76,18 +79,18 @@ function App() {
 // }
 
 // },[])  //dependecy array
-const [productdata,setproductData]=useState([]);
-console.log(productdata,"this is my product data");
+// const [productdata,setproductData]=useState([]);
+// console.log(productdata,"this is my product data");
 // ******************************API CALL*******************************
 useEffect(()=>{
-  const fetchdata = async()=>{
-    let response =await axios.get('https://dummyjson.com/products')
-    console.log(response.data.products);
-    setproductData((prev)=>{
-      return response.data.products
-    })
-  }
-  fetchdata();
+  // const fetchdata = async()=>{
+  //   let response =await axios.get('https://dummyjson.com/products')
+  //   console.log(response.data.products);
+  //   setproductData((prev)=>{
+  //     return response.data.products
+  //   })
+  // }
+  // fetchdata();
 },[])
 
 // 1. dependancy array is empty :UseEffect will run only once, when component mounts
@@ -104,15 +107,17 @@ useEffect(()=>{
     <>
 
   
-<button onClick={increment}>+</button>
+{/* <button onClick={increment}>+</button>
    {count}
-<button>-</button>
+<button>-</button> */}
 
 
-  {
+  {/* {
     login && <Visible/>
 
-  }
+  } */}
+  <Header setCapturedName={setCapturedName}/>
+  <ProductPage captureName={captureName}/>
 
     </>
   );
